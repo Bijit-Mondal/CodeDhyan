@@ -29,3 +29,5 @@ coverage
 
 logs/
 tests_output/
+
+package-lock.json
