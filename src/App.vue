@@ -1,23 +1,22 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from './components/NavBar.vue'
 </script>
 
 <template>
   <header>
-    <div class="wrapper">
-        <HelloWorld/>
-      <div>
-        <RouterLink to="/">Home</RouterLink>
-      </div>
-      <vs-button type="relief" :active="active == 0" @click="active = 0">
-      Active
-    </vs-button>
+    <div>
+        <NavBar/>
     </div>
   </header>
-
-  <RouterView />
+  <main class="main-container">
+    <RouterView />
+  </main>
 </template>
 
 <style scoped>
+/* .main-container {
+  margin: 2rem 0rem 0rem 2rem !important;
+  padding-top: 1rem;
+} */
 </style>
