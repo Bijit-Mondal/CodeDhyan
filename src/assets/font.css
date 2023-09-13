@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Outfit-Black';
+    src: url('../assets/fonts/webfonts/Outfit-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Outfit-Bold';
+    src: url('../assets/fonts/webfonts/Outfit-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Outfit-Extra-Bold';
+    src: url('../assets/fonts/webfonts/Outfit-ExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Outfit-Extra-Light';
+    src: url('../assets/fonts/webfonts/Outfit-ExtraLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Outfit-Light';
+    src: url('../assets/fonts/webfonts/Outfit-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Outfit-Medium';
+    src: url('../assets/fonts/webfonts/Outfit-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aware';
+    src: url('../assets/fonts/ttf/AwareBold-qZo3x.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

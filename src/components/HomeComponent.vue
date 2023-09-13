@@ -2,7 +2,7 @@
     <div class="landing-page">
         <div class="background-image"></div>
         <div class="content">
-            <h1 class="centered-heading">CodeDhyan</h1>
+            <h1 class="centered-heading">CODEDHYAN</h1>
             <p class="description">
                 Be part of community, Be part of
                 Coding culture.
@@ -28,12 +28,12 @@
 
 .background-image {
     position: absolute;
-    width: 110%;
+    width: 100%;
     height: 110%;
     background-image: url("../assets/img/bg.jpg");
     background-size: auto;
     background-position: center;
-    filter: blur(2px);
+    filter: blur(4px);
     z-index: -1;
 }
 
@@ -43,14 +43,17 @@
 }
 
 .centered-heading {
+    font-family: Aware !important;
     font-size: 2.5rem;
     font-weight: bold;
-    color: rgb(var(--vs-danger));
+     background: -webkit-linear-gradient(rgba(132, 228, 199, 0.781), #3b08bd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .description {
     font-size: 1.25rem;
-    color: #fff;
+    color: rgb(var(--vs-success));
     margin-top: 20px;
     width: 30%;
 }
@@ -70,7 +73,12 @@
         width: 100%;
     }
     .background-image{
-        filter: blur(10px);
+        filter: blur(8px);
+    }
+    .background-image {
+        padding-left: 74rem;
+        width: 110%;
+        height: 110%;
     }
 }
 </style>

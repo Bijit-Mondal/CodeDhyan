@@ -1,1 +1,16 @@
 @import './base.css';
+@import './font.css';
+*{
+    font-family: Outfit-Medium;
+}
+[class^="vs"]{
+    font-family: Outfit-Medium !important;
+}
+::-moz-selection { /* Code for Firefox */
+    color: rgb(var(--vs-success));
+    background: black;
+}
+::selection {
+    color: rgb(var(--vs-success));
+    background: black;
+}
