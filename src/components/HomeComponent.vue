@@ -28,12 +28,11 @@
 
 .background-image {
     position: absolute;
-    width: 100%;
+    width: 110%;
     height: 110%;
-    background-image: url("../assets/img/bg.jpg");
+    background-color: rgb(var(--vs-bg-success));
     background-size: auto;
     background-position: center;
-    filter: blur(4px);
     z-index: -1;
 }
 
@@ -44,16 +43,16 @@
 
 .centered-heading {
     font-family: Aware !important;
-    font-size: 2.5rem;
+    font-size: 3.2rem;
     font-weight: bold;
-     background: -webkit-linear-gradient(rgba(132, 228, 199, 0.781), #3b08bd);
+    background:rgb(var(--vs-dark-primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .description {
-    font-size: 1.25rem;
-    color: rgb(var(--vs-success));
+    font-size: 1.8rem;
+    color: rgb(var(--vs-dark));
     margin-top: 20px;
     width: 30%;
 }
@@ -67,18 +66,14 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .content {
-        padding: 2rem; /* Adjust padding for smaller screens */
+        padding: 1rem; /* Adjust padding for smaller screens */
     }
     .description {
-        width: 100%;
+        font-size: 1.5rem;
+        width: 90%;
     }
-    .background-image{
-        filter: blur(8px);
-    }
-    .background-image {
-        padding-left: 74rem;
-        width: 110%;
-        height: 110%;
+    .centered-heading{
+        font-size: 2.8rem;
     }
 }
 </style>

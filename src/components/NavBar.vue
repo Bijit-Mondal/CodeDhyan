@@ -1,14 +1,14 @@
 <template>
-  <div class="hidden">
-    <vs-navbar v-model="active" shadow shape="round" center-collapsed>
+  <div class="center example-nav">
+    <vs-navbar v-model="active" shadow shape="round" style="position:fixed;" center-collapsed>
       <template #left>
         <vs-button type="flat" icon @click="activeSidebar = !activeSidebar">
           <MenuIcon/>
         </vs-button>
       </template>
       <template #right>
-        <vs-button type="flat">Login</vs-button>
-        <vs-button>Get Started</vs-button>
+        <vs-button color="danger" type="flat">Login</vs-button>
+        <vs-button style="color:rgb(var(--vs-dark));" color="danger" type="gradient">Get Started</vs-button>
       </template>
     </vs-navbar>
     <vs-sidebar v-model="active" v-model:open="activeSidebar" absolute>
@@ -17,7 +17,7 @@
       </template>
       <template #header />
       <vs-sidebar-item id="home">
-        Home
+        <span class="menu_items">Home</span>
       </vs-sidebar-item>
       <vs-sidebar-item id="market">
         <span class="menu_items">Market Overview</span>
@@ -99,17 +99,20 @@
 </template>
 <style scoped>
 .vs-navbar{
-  background: transparent !important;
+  background: rgb(var(--vs-dark-primary)) !important;
 }
 .vs-sidebar{
-  background: transparent !important;
+  background: rgb(var(--vs-light-success)) !important;
   border-radius: 20px;
   border: 1px solid rgba(209, 213, 219, 0.3);
   backdrop-filter: blur(10px) saturate(180%);
   -webkit-backdrop-filter: blur(10px) saturate(180%);
 }
+.vs-sidebar-item{
+  background: rgb(var(--vs-light-success)) !important;
+}
 .menu_items{
-  color: rgb(var(--vs-warn));
+  color: rgb(var(--vs-dark));
 }
 </style>
 <script lang="ts" setup>
