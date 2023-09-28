@@ -1,0 +1,24 @@
+{
+    "projectId": "65156d6859cb2aafac0f",
+    "projectName": "codedhyan",
+    "functions": [
+        {
+            "$id": "651570e96b37ddb4c5e4",
+            "name": "like-codelet",
+            "runtime": "bun-1.0",
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15,
+            "enabled": true,
+            "logging": true,
+            "entrypoint": "src/main.ts",
+            "commands": "bun install",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "path": "functions/like-codelet"
+        }
+    ]
+}
