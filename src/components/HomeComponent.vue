@@ -77,7 +77,7 @@ export default {
 
 .content {
     padding-top: 4rem;
-    background-color: rgb(var(--vs-dark));
+    background-color: rgb(var(--bg));
     z-index: 1;
 }
 
