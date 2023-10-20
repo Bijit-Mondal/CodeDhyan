@@ -33,14 +33,14 @@
         gap: 10px;
     }
     .title{
-        color: #fff;
+        color: rgb(var(--text));
         text-align: center;
         font-weight: 500;
         font-size: x-large;
         font-family: Josefin Sans;
     }
     .description{
-        color: #fff;
+        color: rgb(var(--text));
         text-align: center;
         font-weight: 300;
         font-size: medium;
