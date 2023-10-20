@@ -48,3 +48,13 @@
     font-display: swap;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../assets/fonts/ttf/JosefinSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Jockey One';
+    src: url('../assets/fonts/ttf/JockeyOne-Regular.ttf');
+}
