@@ -19,7 +19,7 @@ export default {
     background: rgb(var(--vs-primary));
     box-shadow: 2px 4px 4px 0px rgba(var(--vs-primary), 0.15);
     border: 0;
-    color: rgb(var(--text));
+    color: #fff;
     font-family: Josefin Sans;
     font-weight: 600;
 }
