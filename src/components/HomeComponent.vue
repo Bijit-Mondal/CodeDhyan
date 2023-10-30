@@ -9,39 +9,93 @@
             </div>
             <ForumPic margin="2rem" />
             <div class="search">
-                <search w="600px" h="40px" svg="20px" />
+                <Search w="600px" h="40px" svg="20px" />
             </div>
             <div class="cardview">
-                <card title="Get like minded people"
+                <HomeCard title="Get like minded people"
                     description="CodeDhyan unlocks a vast repository of knowledge and support for tackling coding-related challenges and access to a vibrant community of like-minded enthusiasts."
                     image="src/assets/img/get_like_minded_people.svg" altTag="Get Like Minded People" />
-                <card title="Know latest conding trends"
+                <HomeCard title="Know latest conding trends"
                     description="Get introduced to latest technological news which will help you stay notified on the latest coding trends. Don't get lost in 'what', 'why' and 'how', move on with expertise knowledge."
                     image="src/assets/img/know_latest_coding_trends.svg" altTag="Know latest conding trends" />
-                <card title="Solve your doubts"
+                <HomeCard title="Solve your doubts"
                     description="CodeDhyan is backed by both teachers and students, so never miss out on any doubt we are always ready to solve any coding challenge. Look out for solutions on similar doubts."
                     image="src/assets/img/Solve_your_doubts.svg" altTag="Solve your doubts" />
+            </div>
+            <ImageTextSection direction="row" align="left">
+                <template v-slot:svg><img src="src/assets/img/event_announcement.svg"></template>
+                <template v-slot:title>Event Announcements</template>
+                <template v-slot:description>Get notified on latest events at Ramakrishna Mission Vivekananda Centenary
+                    College, Rahara at CodeDhyan</template>
+            </ImageTextSection>
+            <ImageTextSection direction="row-reverse" align="right">
+                <template v-slot:svg><img src="src/assets/img/coding_related_blogs.svg"></template>
+                <template v-slot:title>Coding related blogs</template>
+                <template v-slot:description>Get extensive coding and technology related blog posts from top contributors
+                    and teachers</template>
+            </ImageTextSection>
+            <div class="secret-section">
+                <div class="secret-title">
+                    Here’s a secret
+                </div>
+                <div class="secret-description">
+                    CodeDhyan features a Stack Overflow like interface for communicating problems and answers. It is free
+                    for all and will remain free forever
+                </div>
+            </div>
+            <div class="one-liner">
+                <Oneliner>
+                    <template v-slot:image>
+                        <img src="src\assets\img\got_question.svg">
+                    </template>
+                    <template v-slot:text>
+                        Got Question?
+                    </template>
+                </Oneliner>
+                <Oneliner>
+                    <template v-slot:image>
+                        <img src="src\assets\img\visit_codedhyan.svg">
+                    </template>
+                    <template v-slot:text>
+                        Visit CodeDhyan
+                    </template>
+                </Oneliner>
+            </div>
+            <div class="one-liner">
+                <Oneliner>
+                    <template v-slot:image>
+                        <img src="src\assets\img\learn_and_enjoy.svg">
+                    </template>
+                    <template v-slot:text>
+                        Learn and Enjoy
+                    </template>
+                </Oneliner>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import card from './HomeCard.vue';
-import ForumPic from './forumPic.vue';
-import search from './searchbar.vue';
+import HomeCard from './HomeCard.vue';
+import ForumPic from './ForumPic.vue';
+import Search from './SearchBar.vue';
+import ImageTextSection from './ImageTextSection.vue';
+import Oneliner from './oneliner.vue';
 
 export default {
     components: {
-        card: card,
-        search: search,
-        ForumPic: ForumPic
-    }
+    HomeCard,
+    Search,
+    ForumPic,
+    ImageTextSection,
+    Oneliner,
+}
 }
 </script>
 
 <style scoped>
 .landing-page {
+    padding-top: 4rem;
     display: flex;
     justify-content: flex-start;
     /* Align content at the left */
@@ -63,6 +117,39 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
+}
+
+.secret-section {
+    display: flex;
+    width: 100%;
+    padding: 0rem 20rem;
+    margin: 2rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.secret-title {
+    font-family: Josefin Sans;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: rgb(var(--text));
+}
+
+.secret-description {
+    text-align: center;
+    font-family: Outfit-Light;
+    line-height: 120%;
+    font-size: 2.8rem;
+    color: rgba(var(--vs-primary), 0.6);
+}
+
+.one-liner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
 }
 
 .background-image {
@@ -113,5 +200,4 @@ export default {
     .centered-heading {
         font-size: 2.8rem;
     }
-}
-</style>
+}</style>
