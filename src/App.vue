@@ -1,22 +1,24 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+// import { RouterLink, RouterView } from 'vue-router'
 import NavBar from './components/NavBar.vue'
+import SideStickyNav from './components/SideStickyNav.vue';
+import FooterComponent from './components/FooterComponent.vue';
 </script>
 
 <template>
   <header>
     <div>
-        <NavBar/>
+      <NavBar :login="true"/>
     </div>
   </header>
   <main class="main-container">
+    <!-- <SideStickyNav/> -->
     <RouterView />
   </main>
+  <footer>
+    <FooterComponent/>
+  </footer>
 </template>
 
 <style scoped>
-/* .main-container {
-  margin: 2rem 0rem 0rem 2rem !important;
-  padding-top: 1rem;
-} */
 </style>
