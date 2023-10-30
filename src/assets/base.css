@@ -1,15 +1,27 @@
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --vs-primary: 139, 112, 205;
-    --vs-dark-primary: 122, 91, 199;
-    --vs-light-success: 197, 180, 240;
-    --vs-bg-success: 217, 209, 237;
-    --vs-success: 170, 150, 218;
-    --vs-danger: 255, 255, 151;
-    --vs-warn: 233,220,201;
-    --vs-dark: 38, 31, 56;
-    --bg: 38, 31, 56;
-    --text: 255, 255, 255; 
-  }
+:root {
+  --vs-primary: 139, 112, 205;
+  --vs-dark-primary: 122, 91, 199;
+  --vs-light-success: 197, 180, 240;
+  --vs-bg-success: 217, 209, 237;
+  --vs-success: 170, 150, 218;
+  --vs-danger: 255, 255, 151;
+  --vs-warn: 233,220,201;
+  --vs-dark: 38, 31, 56;
+  --bg: 233, 224, 255;
+  --text: 0, 0, 0; 
 }
+
+:root.dark-theme {
+  --vs-primary: 139, 112, 205;
+  --vs-dark-primary: 122, 91, 199;
+  --vs-light-success: 197, 180, 240;
+  --vs-bg-success: 217, 209, 237;
+  --vs-success: 170, 150, 218;
+  --vs-danger: 255, 255, 151;
+  --vs-warn: 233,220,201;
+  --vs-dark: 38, 31, 56;
+  --bg: 38, 31, 56;
+  --text: 255, 255, 255; 
+}
+
