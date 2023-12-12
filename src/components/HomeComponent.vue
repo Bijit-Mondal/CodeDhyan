@@ -80,7 +80,7 @@ import HomeCard from './HomeCard.vue';
 import ForumPic from './ForumPic.vue';
 import Search from './SearchBar.vue';
 import ImageTextSection from './ImageTextSection.vue';
-import Oneliner from './oneliner.vue';
+import Oneliner from './OneLiner.vue';
 
 export default {
     components: {
