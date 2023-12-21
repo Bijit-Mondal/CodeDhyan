@@ -3,7 +3,9 @@
         <div>
             <span>Welcome to the RKMVCC Code Club</span>
             <div class="login">
-                <CustomButton title="Log In" />
+                <CustomButton>
+                    <template #context>Log in</template>    s
+                </CustomButton>
             </div>
         </div>
         <hr>
@@ -54,8 +56,8 @@
 </template>
 
 <script setup>
-import CodeDhyanLogo from './CodeDhyanLogo.vue';
-import CustomButton from './CustomButton.vue';
+import CodeDhyanLogo from '../icons/CodeDhyanLogo.vue';
+import CustomButton from '../CustomWidgets/Button/CustomButton.vue';
 </script>
 
 

@@ -1,14 +1,16 @@
 <template>
     <button class="button">
-        {{title}}
+        <!-- Use Slot for content and props for like css properties and other properties  -->
+        <slot name="context">Button</slot>
     </button>
 </template>
 
 <script>
 export default {
-    props: {
-        title: String,
-    }
+    name: 'CustomButton',
+    // props: {
+    //     title: String,
+    // }
 }
 </script>
 

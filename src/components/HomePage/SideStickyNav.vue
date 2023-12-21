@@ -27,7 +27,7 @@
 
 
 <script>
-import NavBarLinks from './NavBarLinks.vue';
+import NavBarLinks from '../NavBar/NavBarLinks.vue';
 
 export default {
     components: {

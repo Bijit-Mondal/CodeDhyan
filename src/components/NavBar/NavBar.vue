@@ -7,7 +7,9 @@
       <NavBarLinks title="Past Events" link="#" fontSize="1rem" />
       <NavBarLinks title="Forum" link="#" fontSize="1rem" />
       <NavBarLinks title="Announcement" link="#" fontSize="1rem" />
-      <CustomButton title="Log In" v-if="login"/>
+      <CustomButton v-if="login">
+          <template #context>Log in</template>
+      </CustomButton>
       <ThemeSlider />
     </div>
   </div>
@@ -15,9 +17,9 @@
 
 
 <script>
-import CodeDhyanLogo from './CodeDhyanLogo.vue';
+import CodeDhyanLogo from '../icons/CodeDhyanLogo.vue';
 import NavBarLinks from './NavBarLinks.vue';
-import CustomButton from './CustomButton.vue';
+import CustomButton from '../CustomWidgets/Button/CustomButton.vue';
 import ThemeSlider from './ThemeSlider.vue';
 
 export default {

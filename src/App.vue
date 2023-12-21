@@ -1,8 +1,8 @@
 <script setup>
-// import { RouterLink, RouterView } from 'vue-router'
-import NavBar from './components/NavBar.vue'
+import { RouterLink, RouterView } from 'vue-router'
+import NavBar from './components/NavBar/NavBar.vue'
 // import SideStickyNav from './components/SideStickyNav.vue';
-import FooterComponent from './components/FooterComponent.vue';
+import FooterComponent from './components/Footer/FooterComponent.vue';
 </script>
 
 <template>

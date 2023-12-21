@@ -76,11 +76,11 @@
 </template>
 
 <script>
-import HomeCard from './HomeCard.vue';
-import ForumPic from './ForumPic.vue';
-import Search from './SearchBar.vue';
-import ImageTextSection from './ImageTextSection.vue';
-import Oneliner from './OneLiner.vue';
+import HomeCard from './HomePage/HomeCard.vue';
+import ForumPic from './HomePage/ForumPic.vue';
+import Search from './icons/SearchBar.vue';
+import ImageTextSection from './HomePage/ImageTextSection.vue';
+import Oneliner from './HomePage/OneLiner.vue';
 
 export default {
     components: {
