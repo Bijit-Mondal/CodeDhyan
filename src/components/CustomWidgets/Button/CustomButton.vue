@@ -24,5 +24,6 @@ export default {
     color: #fff;
     font-family: Josefin Sans;
     font-weight: 600;
+    font-size: 1rem;
 }
 </style>

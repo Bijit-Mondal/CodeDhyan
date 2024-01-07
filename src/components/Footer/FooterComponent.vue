@@ -1,16 +1,8 @@
 <template>
     <div class="footer">
-        <div>
-            <span>Welcome to the RKMVCC Code Club</span>
-            <div class="login">
-                <CustomButton>
-                    <template #context>Log in</template>    s
-                </CustomButton>
-            </div>
-        </div>
         <hr>
         <div class="copyrights">
-            <CodeDhyanLogo svg="3rem" fontSize="2rem" />
+            <CodeDhyanLogo flex="row" svgClass="svgClass" logoFont="logoFont" />
             <span>All © Reserved by Ramakrishna Mission Vivekananda College</span>
             <div class="social-links">
                 <a href="#">
@@ -50,35 +42,23 @@
             </div>
         </div>
         <div class="developer-name">
-            Developed with passion by Asim Roy Chowdhury and Bijit Mondal 
+            Developed with passion by Asim Roy Chowdhury and Bijit Mondal
         </div>
     </div>
 </template>
 
 <script setup>
 import CodeDhyanLogo from '../icons/CodeDhyanLogo.vue';
-import CustomButton from '../CustomWidgets/Button/CustomButton.vue';
 </script>
 
 
-<style scoped>
+<style>
 .footer {
     width: 100%;
     align-items: center;
-    padding: 10rem 10rem 1rem 10rem;
+    padding: 0rem 10rem 1rem 10rem;
     background-color: rgb(var(--bg));
     color: rgb(var(--vs-primary));
-}
-
-.footer div span {
-    font-size: 2rem;
-}
-
-.footer div {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-
 }
 
 .footer hr {
@@ -86,13 +66,22 @@ import CustomButton from '../CustomWidgets/Button/CustomButton.vue';
 }
 
 .copyrights {
+    width: 100%;
     margin-top: 1rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: 10rem 1fr 10rem;
+    text-align: center;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
 }
 
-.copyrights span {
+/* .svglogo {
+    display: block;
+    width: 0.1rem;
+    height: 0.1rem;
+} */
+
+.copyrights>span {
     font-size: 1rem !important;
 }
 
@@ -107,17 +96,78 @@ import CustomButton from '../CustomWidgets/Button/CustomButton.vue';
     stroke: rgb(var(--vs-primary));
 }
 
-.x , .facebook , .instagram{
+.x,
+.facebook,
+.instagram {
     height: auto;
     width: 1.5rem;
     fill: rgb(var(--vs-primary));
 }
 
-.developer-name{
+.developer-name {
     width: 100%;
     align-items: center;
     justify-content: center !important;
     text-align: center;
-    
+
+}
+
+.logoFont {
+    font-size: 1.5rem;
+}
+
+.svgClass {
+    width: 3rem;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        padding: 0rem 2rem 1rem 2rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .copyrights {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .logoFont {
+        font-size: 4rem;
+    }
+
+    .svgClass {
+        width: 5rem;
+        margin-right: 0.5rem;
+    }
+
+    .developer-name {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 530px) {
+    .copyrights {
+        gap: 1rem;
+    }
+
+    .logoFont {
+        font-size: max(1.5rem, 10vw);
+    }
+
+    .svgClass {
+        width: max(30px, 15vw);
+        margin-right: 0.5rem;
+    }
+
+    .copyrights>span {
+        font-size: 0.8rem !important;
+    }
+
+    .developer-name {
+        font-size: 0.8rem;
+    }
 }
 </style>

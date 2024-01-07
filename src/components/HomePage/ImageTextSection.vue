@@ -1,11 +1,11 @@
 <template>
-    <div class="ImageText" :style="{'flex-direction': direction}">
-        <slot name="svg"></slot>
+    <div class="ImageText" :class="imageTextDirection">
+        <img :src="svg"/>
         <div class="TitleDescription">
-            <div class="title" :style="{'text-align': align}">
+            <div class="title" >
                 <slot name="title"></slot>
             </div>
-            <div class="description" :style="{'text-align': align}">
+            <div class="ImageTextdescription" >
                 <slot name="description"></slot>
             </div>
         </div>
@@ -15,8 +15,9 @@
 <script>
     export default {
         props: {
-            direction: String,
+            imageTextDirection: String,
             align: String,
+            svg: String
         }
     }
 
@@ -44,12 +45,48 @@
         font-family: Josefin Sans;
         font-weight: 700;
         color: rgb(var(--text));
-        font-size: 5rem;
+        font-size: 4rem;
         line-height: 100%;
     }
-    .description{
+    .ImageTextdescription{
         font-family: Outfit-Light;
         color: rgb(var(--text));
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+
+        .ImageText{
+            padding: 1rem 8rem;
+        }
+        .ImageText > img {
+            width: 12rem;
+        }
+
+        .TitleDescription {
+            width: 25rem;
+        }
+
+        .title {
+            font-size: 2.2rem;
+        }
+
+        .ImageTextdescription {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 530px) {
+
+        .ImageText{
+            margin-bottom: 2rem;
+        }
+        .ImageText > img {
+            width: min(70vw, 250px);
+        }
+
+        .TitleDescription {
+            width: 80vw;
+        }
     }
 </style>

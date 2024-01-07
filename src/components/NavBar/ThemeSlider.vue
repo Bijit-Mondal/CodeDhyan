@@ -74,7 +74,7 @@ export default {
 }
 
 input {
-  visibility: hidden;
+  display: none;
 }
 
 input:checked+.slider {
@@ -86,6 +86,33 @@ input:checked+.slider::after {
   background: #000;
   transform: translateY(150%);
   transition: 0.3s;
+
+}
+
+@media screen and (max-width: 650px) {
+  .slider {
+    height: 2rem;
+    width: 1rem;
+  }
+
+  .slider::after {
+    height: 0.6rem;
+    width: 0.6rem;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .slider {
+    height: 2.5rem;
+    width: 1.2rem;
+    rotate: 90deg;
+  }
+
+  .slider::after {
+    height: 0.8rem;
+    width: 0.8rem;
+  }
 
 }
 </style>

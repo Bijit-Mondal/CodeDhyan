@@ -1,6 +1,6 @@
 <template>
     <div class="section">
-        <slot name="image"></slot>
+        <img :src="img"/>
         <div class="text">
             <slot name="text"></slot>
         </div>
@@ -10,6 +10,9 @@
 <script>
 export default {
     name: 'OneLiner',
+    props: {
+        img: String,
+    }
 }
 </script>
 
@@ -23,11 +26,31 @@ export default {
     gap: 1rem;
 }
 
-.text{
+.text {
     text-align: center;
     color: rgb(var(--vs-primary));
     font-family: Josefin Sans;
     font-weight: 700;
     font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .section{
+        width: 30%;
+    }
+
+    .text{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 530px) {
+
+    .section { 
+        width: 60vw;
+    }
+    .text{
+        font-size: 8vw;
+    }
 }
 </style>
